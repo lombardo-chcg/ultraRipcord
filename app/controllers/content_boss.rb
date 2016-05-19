@@ -1,5 +1,7 @@
 get '/content_boss/get_content' do
-  vienna = ['PL-mSV3w33pTTEELPX-KFH2WjWlUFMYKcJ','RD8NBbI_d72bo']
+  options = Content.all.count
+  chosen_media = Content.find(rand(options))
+  chosen_media.short_description
   if request.xhr?
     # vienna.sample
     content_type :json

@@ -1,9 +1,37 @@
+h6, h5, h4, h3, h2, h1, p, a  {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.formText {
+  font-family: 'Open Sans', sans-serif;
+}
 .container {
   margin: 20px auto;
   width: 600px;
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
 }
-th {
-  text-align: left;
+
+.selectGenre {
+  border: 1px solid plum;
+  margin: 2%;
 }
+
+
+/* FORM BUTTON
+*********************/
+
+/*input[type=checkbox] {
+  visibility: hidden;
+}*/
+
+/*.checkboxFour {
+  width: 40px;
+  height: 40px;
+  background: #ddd;
+  margin: 20px 90px;
+
+  border-radius: 100%;
+  position: relative;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+}*/

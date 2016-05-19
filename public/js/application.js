@@ -1,16 +1,8 @@
 var dbPlaylist = '';
 var userInterval;
+var contentType = ''
 
 $(document).ready(function() {
-  // // grab form input from user
-  // $('#time-form').on('submit', function(event) {
-  //   // event.preventDefault(event)
-  //   minutes = $('#time-form input').val()
-  //   minutes = Number(minutes)
-  //   userInterval = (minutes * 60) * 1000
-  //   $('#input-form').remove()
-  // });
-
     // dial up server for new content
     request = $.ajax({
       url: '/content_boss/get_content'
@@ -20,13 +12,6 @@ $(document).ready(function() {
     });
 });
 
-
-var url = window.location.href;
-var params = url.split('=');
-minutes = Number(params);
-userInterval = (minutes * 60) * 1000;
-// var time_request = params.split('=');
-// alert(params[1]);
 // 2. This code loads the IFrame Player API code asynchronously.
 var tag = document.createElement('script');
 
@@ -48,8 +33,6 @@ function onYouTubeIframeAPIReady() {
     }
   });
 }
-
-
 
 // 4. The API will call this function when the video player is ready.
 function onPlayerReady(event) {
