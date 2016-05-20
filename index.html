@@ -17,9 +17,9 @@
       var player;
       function onYouTubeIframeAPIReady() {
         player = new YT.Player('player', {
-          height: '390',
-          width: '640',
-          videoId: 'M7lc1UVf-VE',
+          height: '200',
+          width: '200',
+          // videoId: 'wzjWIxXBs_s',
           events: {
             'onReady': onPlayerReady,
             'onStateChange': onPlayerStateChange
@@ -27,8 +27,14 @@
         });
       }
 
+
+
       // 4. The API will call this function when the video player is ready.
       function onPlayerReady(event) {
+        player.loadPlaylist({
+          list: "PL-mSV3w33pTTEELPX-KFH2WjWlUFMYKcJ",
+          listType: 'playlist',
+        });
         event.target.playVideo();
       }
 
