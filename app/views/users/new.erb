@@ -1,9 +1,13 @@
+<main>
+ <div class='form-wrapper'>
   <% if @errors %>
     <section class = "errors-wrapper">
       <%= erb :"_errors" %>
     </section>
   <% end %>
 
+
+    <h1>Join Us!</h1>
     <form id="register-form" action='/users' method='post'>
       <input type="text" name="user[username]" placeholder="username">
       <br>
@@ -13,3 +17,5 @@
       <br>
       <input type="submit" value="Submit">
     </form>
+  </div>
+</main>

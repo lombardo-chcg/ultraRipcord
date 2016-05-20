@@ -3,6 +3,10 @@ class User < ActiveRecord::Base
   has_many :preferences
   has_many :preferred_tags, through: :preferences, source: :tag
 
+  validates :username, { uniqueness: true, presence: true }
+  validates :email, { uniqueness: true, presence: true }
+  validate  :validate_password
+
   def password
     @password ||= BCrypt::Password.new(hashed_password)
   end

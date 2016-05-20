@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+  <meta charset=utf-8>
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/css/normalize.css">
@@ -12,23 +12,22 @@
 
   <title>StudyHabits</title>
 </head>
-
-
-  <header>
-    <a id="brand" href='/'>StudyHabits</a>
-    <nav>
-      <% if user_logged_in? %>
-        <a href='/users/<%= current_user.id %>'><%= current_user.username%></a> //
-        <a href='/logout'>Logout</a>
-      <% else %>
-        <a href='/users/new'>Register</a> //
-        <a href='/login'>Login</a>
-      <% end %>
-    </nav>
-  </header>
-
 <body>
+    <header>
+      <section id='logo'><h1>StudyHabits</h1></section>
+      <nav>
+        <% if user_logged_in? %>
+          <a href='/users/<%= current_user.id %>'><%= current_user.username%></a> //
+          <a href='/logout'>Logout</a>
+        <% else %>
+          <a href='/users/new'>Register</a> //
+          <a href='/login'>Login</a>
+        <% end %>
+      </nav>
+    </header>
+
   <%= yield %>
+
 </body>
 </html>
 

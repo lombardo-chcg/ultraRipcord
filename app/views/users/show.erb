@@ -1,3 +1,31 @@
-<%= current_user.username %>
+  <script src="/js/form.js"></script>
 
-<a href='/users/newPreferences'>Set Your Preferences<a>
+<main>
+  <br><br>
+  <div class='centerMe'>
+    <h1> Welcome, <%= current_user.username %> </h1>
+      <hr class="star-light">
+    <% if current_user.preferred_tags.count == 0 %>
+      <a href='/users/newPreferences'>Let's Set Your Preferences<a>
+  </div>
+    <% else %>
+  </div>
+  <section id="preference">
+    <h2> Your preferences: </h2>
+      <% current_user.preferred_tags.each do |tag| %>
+        <p> <%= tag.description %> <p>
+      <% end %>
+  </section>
+  <section id="startStudying">
+      <h2> Get ur focus on. </h2>
+      <p>enter a time interval to begin</p>
+      <section id="input-form">
+        <form id='time-form' action='/theaters/show'>
+          <input type='text' name='inteval' placeholder='how long? (minutes)'>
+          <input type='submit' value='go'>
+        </form>
+      </section>
+  </section>
+    <% end %>
+  </div>
+</main>
