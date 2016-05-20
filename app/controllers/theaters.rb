@@ -6,4 +6,7 @@ get '/theaters/ajax' do
   erb :'theaters/ajaxTheater'
 end
 
+get '/theater/diversion' do
+  erb :'theaters/diversions'
+end
 

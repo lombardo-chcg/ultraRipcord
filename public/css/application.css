@@ -56,7 +56,7 @@ nav a:active, nav a:hover {
 main {
   width: 100%;
   background-color: #046EAC;
-  min-height: 200px;
+  min-height: 1000px;
   /*text-align: center;*/
   color: white;
   padding-bottom: 10%;
@@ -150,6 +150,15 @@ button a {
   width: 25%;
   min-height: 200px;
   float: left;
+}
+
+#timer {
+  position: absolute;
+  height: 50px;
+  width: 10px;
+  background-color: #FF0DFF;
+  left: 0;
+  border-radius: 15px;
 }
 
 

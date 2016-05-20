@@ -25,6 +25,11 @@ post '/users/setPreferences' do
   redirect "/users/#{current_user.id}"
 end
 
+get 'users/video_over' do
+  @user = current_user
+  redirect "/users/#{@user.id}"
+end
+
 get '/users/:id' do
   erb :'users/show'
 end
