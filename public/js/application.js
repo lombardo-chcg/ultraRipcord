@@ -31,7 +31,7 @@ function onYouTubeIframeAPIReady() {
     height: '200',
     width: '200',
     // if (contentType == 'track') {
-      // videoId: 'wzjWIxXBs_s',
+      videoId: 'wzjWIxXBs_s',
     // }
     events: {
       'onReady': onPlayerReady,
@@ -43,14 +43,14 @@ function onYouTubeIframeAPIReady() {
 // 4. The API will call this function when the video player is ready.
 onPlayerReady = function(event) {
 
-  if (contentType == 'track' ) {
-    player.loadVideoById( {videoId: ytURL} );
-  } else if (contentType == 'playlist') {
-    player.loadPlaylist({
-      list: ytURL,
-      listType: contentType
-    });
-  }
+  // if (contentType == 'track' ) {
+  //   player.loadVideoById( {videoId: ytURL} );
+  // } else if (contentType == 'playlist') {
+  //   player.loadPlaylist({
+  //     list: ytURL,
+  //     listType: contentType
+  //   });
+  // }
   event.target.playVideo();
 }
 

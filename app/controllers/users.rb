@@ -3,9 +3,21 @@ get '/users/new' do
 end
 
 post '/users' do
-  p params
+  @user = User.new(params[:user])
+
+  if @user.save
+    session[:user_id] = @user.id
+    redirect '/'
+  else
+    @errors = @user.errors.full_messages
+    erb :'users/new'
+  end
 end
 
-get '/users/wtf' do
-  p params
+get '/users/newPreferences' do
+  erb :'users/newPreferences'
+end
+
+get '/users/:id' do
+  erb :'users/show'
 end
