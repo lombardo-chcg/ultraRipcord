@@ -8,6 +8,7 @@ $(document).ready(function() {
     url: '/content_boss/get_content'
   });
   request.done(function(response){
+    console.log(response)
     ytURL = response.url;
     contentType = response.content_type
     $('.content-description').append(response.description)
@@ -48,7 +49,7 @@ onPlayerReady = function(event) {
   // } else if (contentType == 'playlist') {
   //   player.loadPlaylist({
   //     list: ytURL,
-  //     listType: contentType
+  //     listType: contentType,
   //   });
   // }
   event.target.playVideo();
