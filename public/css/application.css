@@ -1,20 +1,80 @@
-h6, h5, h4, h3, h2, h1, p, a  {
+/* Global styles
+***************************************/
+h6, h5, h4, h3, h2, h1, p, a, input  {
   font-family: 'Montserrat', sans-serif;
 }
+
+a {
+  text-decoration: none;
+}
+
+
+/* Header
+******************************************/
+
+header {
+  width: 80%;
+  margin: auto;
+  height: 3em;
+  background-color: #8E4585;
+  box-sizing: border-box;
+}
+#brand {
+  width: 50%;
+  float: left;
+  font-size: 1.3em;
+  padding-top: .5em;
+  padding-left: 1em;
+  color: aqua;
+}
+
+header a:visited {
+  color: #000000;
+}
+
+nav {
+  padding-top: 1%;
+  float: right;
+  font-size: 1em;
+  color: white;
+  padding-right: 1em;
+  padding-top: .75em;
+}
+
+nav a {
+  color: aqua;
+}
+/*
+*******************************************/
 
 .formText {
   font-family: 'Open Sans', sans-serif;
 }
 .container {
   margin: 20px auto;
+  width: 80%;
+  padding: 0px 20px 20px 20px;
+/*  border: 1px dotted black;*/
+  display: table;
+}
+
+.theaterContainer {
+  padding-top: 2em;
+  margin: 20px auto;
   width: 600px;
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
+  text-align: center;
 }
+
 
 .selectGenre {
   border: 1px solid plum;
   margin: 2%;
+  padding: 2%;
+  width: 25%;
+  min-height: 200px;
+  float: left;
 }
 
 
