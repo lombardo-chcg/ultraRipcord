@@ -1,49 +1,17 @@
-
-<div class="container">
-  <form action="/users" method='post'>
-
-    <section class= "selectGenre">
-      <h3>Choose for me</h3>
-      <input type="checkbox" name="no_preferences"> <span class='formText'> I give you the power </span><br>
+<div class="main">
+  <% if @errors %>
+    <section class = "errors-wrapper">
+      <%= erb :"_errors" %>
     </section>
+  <% end %>
 
-    <section class= "selectGenre">
-      <h3>Classical Music</h3>
-      <input type="checkbox" name="classical_notPicky"> <span class='formText'> I'm Not Picky </span><br>
-      <input type="checkbox" name="classical_quartets"> <span class='formText'> Strings & Chamber Music </span><br>
-      <input type="checkbox" name="classical_piano"> <span class='formText'> Piano </span><br>
-      <input type="checkbox" name="classical_concerto"> <span class='formText'> Piano + Strings together </span><br>
-    </section>
-
-    <section class = "selectGenre">
-      <h3>New Age & Modern Instrumental Music</h3>
-      <input type="checkbox" name="modern_notPicky"> <span class='formText'> I'm Not Picky </span><br>
-      <input type="checkbox" name="modern_dreamyClassical"> <span class='formText'> Dreamy Classical Piano </span><br>
-      <input type="checkbox" name="modern_newAge"> <span class='formText'> New Age Piano </span><br>
-    </section>
-
-    <section class= "selectGenre">
-      <h3>Electronic Music</h3>
-      <input type="checkbox" name="electronic_notPicky"> <span class='formText'> I'm Not Picky</span><br>
-      <input type="checkbox" name="electronic_active"> <span class='formText'> Active/High Energy</span><br>
-      <input type="checkbox" name="electronic_dark"> <span class='formText'> Dark, Atmospheric</span><br>
-      <input type="checkbox" name="electronic_groovy"> <span class='formText'> Groovy</span><br>
-      <input type="checkbox" name="electronic_dark"> <span class='formText'> Uplifting</span><br>
-    </section>
-
-    <section class= "selectGenre">
-      <h3>Non-musical Options</h3>
-      <input type="checkbox" name="sounds_notPicky"> <span class='formText'> I'm Not Picky</span><br>
-      <input type="checkbox" name="sounds_whiteNoise"> <span class='formText'> White Noise</span><br>
-      <input type="checkbox" name="sounds_rainForest"> <span class='formText'> Rain Forest</span><br>
-      <input type="checkbox" name="sounds_ocean"> <span class='formText'> Ocean</span><br>
-      <input type="checkbox" name="sounds_storm"> <span class='formText'> Rain & Storms </span><br>
-      <input type="checkbox" name="sounds_flowingWater"> <span class='formText'> Flowing Water / River</span><br>
-    </section>
-
-    <section class= "selectGenre">
-      <input type='submit' value='submit'>
-    </section>
-
-  </form>
+    <form id="register-form" action='/users' method='post'>
+      <input type="text" name="user[username]" placeholder="username">
+      <br>
+      <input type="text" name="user[email]" placeholder="email">
+      <br>
+      <input type="password" name="user[password]" placeholder="password">
+      <br>
+      <input type="submit" value="Submit">
+    </form>
 </div>

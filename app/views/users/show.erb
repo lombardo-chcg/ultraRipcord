@@ -1,0 +1,61 @@
+
+<h1>Welcome to <%= User.find_by(id: params[:captures]).username %>'s page</h1>
+
+<section class="user-page-container">
+  <h3>Auctions</h3>
+  <table>
+  <% if user_logged_in? %>
+    <tr><a href='/auctions/new'>+ Add Auction</a></tr>
+  <% end %>
+    <% User.find_by(id: params[:captures]).auctions.each do |auction| %>
+      <tr>
+        <td><a href="/auctions/<%=auction.id%>"><%= auction.item_name %></a></td>
+        <% if user_logged_in? && current_user.id == auction.creator_id %>
+          <td>
+            <button><a href="/auctions/<%= auction.id %>/edit">Edit</a></button>
+          </td>
+          <td>
+            <form method="POST" action="/auctions/<%= auction.id %>">
+              <input type="hidden" name="_method" value="DELETE">
+              <input type="submit" value="Delete">
+            </form>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+</section>
+
+<% if user_logged_in? && current_user.id == params[:id].to_i %>
+  <section class="user-page-container">
+
+
+    <h3>Your Bids</h3>
+    <table>
+      <% current_user.bids.each do |bid| %>
+        <tr>
+          <td>
+            <a href="/auctions/<%= bid.auction_id %>"><%= Auction.find(bid.auction_id).item_name %></a>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+
+</section>
+<% end %>
+
+<% if user_logged_in? && current_user.id == params[:id].to_i %>
+  <section class="user-page-container">
+
+    <h3>Stuff You Won</h3>
+    <table>
+      <% current_user.won_auctions.each do |auction| %>
+        <tr>
+          <td>
+            <a href="/auctions/<%= auction.id %>"><%= auction.item_name %></a>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  </section>
+<% end %>

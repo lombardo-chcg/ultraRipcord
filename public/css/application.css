@@ -78,20 +78,27 @@ nav a {
 }
 
 
-/* FORM BUTTON
+/* FORMs
 *********************/
 
-/*input[type=checkbox] {
-  visibility: hidden;
-}*/
+.main {
+  width: 80%;
+  margin: auto;
+  padding-bottom: 5%;
+}
 
-/*.checkboxFour {
-  width: 40px;
-  height: 40px;
-  background: #ddd;
-  margin: 20px 90px;
+.form-wrapper, .errors-wrapper {
+  text-align: center;
+}
 
-  border-radius: 100%;
-  position: relative;
-  box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
-}*/
+input[type=text], input[type=password] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type=submit], button {
+  margin: 8px 0;
+  padding: 12px 20px;
+  background-color: plum;
