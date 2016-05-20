@@ -12,7 +12,7 @@ redirectURL = "http://localhost:9393/users/video_over";
 function timedRedirect() {
   setTimeout("location.href = redirectURL;",redirectTime);
 }
-timedRedirect()
+// timedRedirect()
 
 
 $(document).ready(function() {
@@ -45,7 +45,7 @@ function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
     height: '300',
     width: '300',
-    videoId: 'OUx6ZY60uiI',
+    videoId: 'GeZZr_p6vB8',
     events: {
       'onReady': onPlayerReady,
       'onStateChange': onPlayerStateChange
