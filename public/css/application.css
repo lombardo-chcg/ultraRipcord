@@ -17,7 +17,7 @@ a {
 header {
   width: 100%;
   background-color: #2CA3E7;
-  height: 3em;
+  height: 4em;
   padding: .2% 0 0 5%;
   box-sizing: border-box;
 }
@@ -27,14 +27,15 @@ header {
 }
 
 #logo h1 {
+  padding-top: .2em;
   color: white;
   line-height: 0;
 }
 
 nav {
   float: right;
-  width: 20%;
-  padding-top: .2%;
+  width: 30%;
+  padding-top: .7%;
 }
 
 nav a {
@@ -43,6 +44,7 @@ nav a {
   color: white;
   padding: 1%;
   border-radius: 15px;
+  font-size: 1em;
 }
 
 nav a:active, nav a:hover {
